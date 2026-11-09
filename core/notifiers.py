@@ -14,9 +14,12 @@ class EmailNotifier:
 class WhatsAppNotifier:
     def kirim(self, penerima: str, pesan: str) -> None:
         print(f"[WHATSAPP] ke {penerima}: {pesan}")
+
+
+# --- TAMBAHKAN KELAS INI UNTUK TUGAS MANDIRI 2 ---
 class TelegramNotifier:
     def __init__(self, token_bot: str = "TOKEN-CONTOH"):
         self.token_bot = token_bot
  
     def kirim(self, penerima: str, pesan: str) -> None:
-        ...  # TODO: cetak "[TELEGRAM] ke <penerima>: <pesan>"
+        print(f"[TELEGRAM] ke {penerima}: {pesan}")
