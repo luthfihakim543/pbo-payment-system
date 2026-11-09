@@ -1,6 +1,6 @@
 from core.base import PaymentMethod
-from core.utils import buat_id
 from core.registry import register_plugin
+from core.utils import buat_id
 
 
 @register_plugin("qris")
@@ -15,3 +15,6 @@ class QRIS(PaymentMethod):
 
     def bayar(self, jumlah: float) -> str:
         return buat_id("QRS")
+
+    def biaya_admin(self, jumlah: float) -> float:
+        return jumlah * 0.007
